@@ -1,3 +1,16 @@
 <div class="container justify-content-center">
 {{transaction | json}}
+
+
+<table class="table table-striped">
+<tr><th>action</th><th>amount</th><th>value</th></tr>
+<tr>
+<td>{{transaction.action}}</td>
+<td>{{transaction.amount}}</td>
+<td>{{transaction.value}}</td>
+
+</tr>
+
+</table>
+
 </div>
