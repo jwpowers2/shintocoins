@@ -18,7 +18,7 @@ export class CoinsService {
   }
 
   mineCoins(i){
-    console.log(this.coinCount);
+    //console.log(this.coinCount);
     if (parseInt(i) === 13){
     this.coinValue += 1;
     this.coinCount += 1; 
@@ -27,17 +27,21 @@ export class CoinsService {
     }
   }
 
-  buyCoins(x){
-    // is coinValue > 1?
+  buyCoins(j){
+    let x = parseInt(j);
+    
     if (this.coinValue < 2){return};
+    if (x < 1){return}; 
     this.wealth -= x;
     this.coinCount += x;
     this.coinValue += x;
     this.ledger.push({action:"buy", amount:x,value:this.coinValue});  
   }
 
-  sellCoins(z){
-    if (this.coinCount < z){return}; 
+  sellCoins(j){
+    let z = parseInt(j);
+    if (this.coinCount < z){return};
+    if (z < 1){return}; 
     this.wealth += z;
     this.coinCount -= z;
     this.coinValue -= z;
