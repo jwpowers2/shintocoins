@@ -1,3 +1,11 @@
-<p>
-  sell works!
-</p>
+
+<div class="container justify-content-center">
+<h1>Sell Shinto Coins</h1>
+
+
+<form (submit)="sell(count)">
+<input type="text" [(ngModel)]="count" name="count" placeholder="number">
+<input type="submit" name="submit" value="Sell">
+</form>
+
+</div>

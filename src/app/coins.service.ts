@@ -28,7 +28,8 @@ export class CoinsService {
   }
 
   buyCoins(x){
-
+    // is coinValue > 1?
+    if (this.coinValue < 2){return};
     this.wealth -= x;
     this.coinCount += x;
     this.coinValue += x;
@@ -36,7 +37,7 @@ export class CoinsService {
   }
 
   sellCoins(z){
-
+    if (this.coinCount < z){return}; 
     this.wealth += z;
     this.coinCount -= z;
     this.coinValue -= z;

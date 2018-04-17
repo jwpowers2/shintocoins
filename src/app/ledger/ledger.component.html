@@ -4,11 +4,14 @@
 </p>
 
 <div class="container justify-content-center">
-<table class="table table-striped" *ngFor="let i of ledger">
-<tr>
-<td>{{i.action}}</td>
-<td>{{i.amount}}</td>
-<td>{{i.value}}</td>
+<table class="table table-striped">
+<tr><th>action</th><th>amount</th><th>value</th></tr>
+<tr *ngFor="let v of ledger;index as i">
+<td>{{v.action}}</td>
+<td>{{v.amount}}</td>
+<td>{{v.value}}</td>
+<td><button [routerLink]="['transaction',i]">{{i}}</button></td>
 </tr>
+
 </table>
 </div>
