@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CoinsService } from "../coins.service";
 
 @Component({
   selector: 'app-transaction',
@@ -11,14 +12,19 @@ export class TransactionComponent implements OnInit {
 
   id:number;
   private sub:any;
-
-  constructor(private route: ActivatedRoute) { }
+  transaction:any;
+  constructor(private route: ActivatedRoute,private cs:CoinsService) { }
     
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
 
       this.id = +params['id'];
+      this.transaction=this.getTransaction();
     });
+  }
+
+  getTransaction(){
+    return this.cs.ledger[this.id];
   }
 
 }

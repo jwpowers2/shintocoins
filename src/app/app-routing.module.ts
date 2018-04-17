@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'buy', component: BuyComponent },
   {path: 'mine', component: MineComponent },
   {path: 'ledger', component: LedgerComponent },
-  {path: 'transaction', component: TransactionComponent },
+  {path: 'ledger/transaction/:id', component: TransactionComponent },
 
 ];
 
