@@ -7,7 +7,7 @@ export class CoinsService {
   private coinValue:any;
   private wealth:any;
   private coinCount:any;
-  private ledger:any;
+  public ledger:any;
   
 
   constructor(private http:HttpClient) { 

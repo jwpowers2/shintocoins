@@ -8,14 +8,15 @@ import { CoinsService } from "../coins.service";
 })
 
 export class LedgerComponent implements OnInit {
-
+  public ledger:any;
   constructor(private cs:CoinsService) { }
-
+   
   ngOnInit() {
-    this.ledger = this.getLedger();
+    this.getLedger();
   }
 
   getLedger(){
-    return this.cs.ledger;
+    //return this.cs.ledger;
+    this.ledger = this.cs.ledger;
   }
 }
