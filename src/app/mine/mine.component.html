@@ -3,8 +3,9 @@
 
 <h3>Here you can mine ShintoCoins by being the first to solve the algorithm</h3>
 <h3>What is the 7th Fibonacci sequence number?</h3>
-<form>
-<input type="text" name="number" placeholder="number">
+
+<form (submit)="mine(count)">
+<input type="text" [(ngModel)]="count" name="count" placeholder="number">
 <input type="submit" name="submit" value="Mine">
 </form>
 
