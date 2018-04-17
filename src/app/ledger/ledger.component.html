@@ -1,3 +1,14 @@
 <p>
   ledger works!
+  {{ledger|json}}
 </p>
+
+<div class="container justify-content-center">
+<table class="table table-striped" *ngFor="let i of ledger">
+<tr>
+<td>{{i.action}}</td>
+<td>{{i.amount}}</td>
+<td>{{i.value}}</td>
+</tr>
+</table>
+</div>

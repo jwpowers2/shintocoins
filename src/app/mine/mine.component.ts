@@ -24,7 +24,7 @@ export class MineComponent implements OnInit {
 
     this.cs.mineCoins(count);
     //console.log(this.count); 
-
+    //console.log(this.cs.getCoinValue());
   }
 
 }

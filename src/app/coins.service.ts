@@ -11,20 +11,15 @@ export class CoinsService {
   
 
   constructor(private http:HttpClient) { 
-  }
-
-  getCoinValue(){
-
-    return this.coinValue;
-  }
-
-  wealthValue(){
-    return this.wealth;
+    this.coinCount = 0;
+    this.coinValue = 0;
+    this.wealth = 0;
+    this.ledger = [];
   }
 
   mineCoins(i){
-    if (i === 13){
-    // add current value of coin into wealth and increase value of coin by one
+    console.log(this.coinCount);
+    if (parseInt(i) === 13){
     this.coinValue += 1;
     this.coinCount += 1; 
     this.wealth += (this.coinValue * this.coinCount);  
